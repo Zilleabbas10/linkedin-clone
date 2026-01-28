@@ -11,9 +11,9 @@ function App() {
     <div className="bg-gray-100 w-full h-full box-border">
       <Navbar1 />
       <Routes>
-        <Route path='/' element={<LandingPage />} />
-        <Route path='/signup' element={<SignupPage />} />
-        <Route path='/login' element={<LoginPage />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
       <Footer />
     </div>
