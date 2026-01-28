@@ -7,9 +7,9 @@ const navLinkPrimary = `${navLinkBase} text-gray-800 hover:bg-gray-200`
 
 const navLinkOutline = `${navLinkBase} text-blue-800 border-2 border-blue-800 hover:bg-blue-50`
 
-function Navbar1() {
+const Navbar1 = () => {
   return (
-    <nav className="w-full bg-gray-100 md:px-16 px-5 flex justify-between items-center py-4 box-border border-b border-gray-200">
+    <nav className="w-full fixed bg-gray-100 md:px-16 px-5 flex justify-between items-center py-4 box-border border-b border-gray-200">
       <Link
         to="/"
         className="flex gap-1.5 items-center cursor-pointer no-underline hover:opacity-90 transition-opacity"

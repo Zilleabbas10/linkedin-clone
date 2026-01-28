@@ -5,9 +5,9 @@ import GoogleLoginButton from '../../components/GoogleLoginButton/googleLoginBut
 const btnBase =
   'flex items-center justify-center w-full md:w-[70%] mx-auto rounded-full py-3 px-4 font-medium transition-all duration-200 cursor-pointer'
 
-function LandingPage() {
+const LandingPage = () => {
   return (
-    <div className="my-4 py-8 md:py-14 md:pl-16 lg:pl-24 px-5 md:flex md:justify-between md:items-center md:gap-12 max-w-6xl mx-auto">
+    <div className="mt-20 mb-4 py-8 md:py-14 md:pl-16 lg:pl-24 px-5 md:flex md:justify-between md:items-center md:gap-12 max-w-6xl mx-auto">
       <div className="md:max-w-md md:flex-1 space-y-5">
         <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 leading-tight tracking-tight">
           Welcome to your professional community

@@ -11,7 +11,7 @@ const Footer = () => {
           <span className="text-blue-800 font-bold text-lg">Linked</span>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-            alt="LinkedIn"
+            alt="LinkedInLogo"
             className="size-5"
           />
         </Link>

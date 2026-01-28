@@ -8,9 +8,9 @@ import {
 } from '../../constants/classes'
 import GoogleLoginButton from '../../components/GoogleLoginButton/googleLoginButton'
 
-function LoginPage() {
+const LoginPage = () => {
   return (
-    <div className="w-full flex flex-col items-center py-8 md:py-12 px-5">
+    <div className="w-full flex flex-col items-center mt-20 py-8 md:py-12 px-5">
       <div className="w-full max-w-md shadow-lg rounded-xl bg-white p-8 md:p-10">
         <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-6">
           Sign in
