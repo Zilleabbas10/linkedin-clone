@@ -6,6 +6,7 @@ import {
   btnPrimary,
   dividerClassName,
 } from '../../constants/classes'
+import GoogleLoginButton from '../../components/GoogleLoginButton/googleLoginButton'
 
 function SignupPage() {
   return (
@@ -62,9 +63,8 @@ function SignupPage() {
           <span className="text-sm text-gray-500 font-medium">or</span>
           <div className={dividerClassName} />
         </div>
-
-        <div className="rounded-full border border-gray-300 py-2.5 px-4 text-center text-gray-500 text-sm cursor-pointer hover:bg-gray-50 transition-colors">
-          Continue with Google
+        <div className="rounded-full border border-gray-300 py-6 px-4 text-center text-gray-500 text-sm cursor-pointer hover:bg-gray-50 transition-colors">
+          <GoogleLoginButton />
         </div>
       </div>
 

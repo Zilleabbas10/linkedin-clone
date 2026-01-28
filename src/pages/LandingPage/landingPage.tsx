@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { linkClassName, linkClassNameBold } from '../../constants/classes'
+import GoogleLoginButton from '../../components/GoogleLoginButton/googleLoginButton'
 
 const btnBase =
   'flex items-center justify-center w-full md:w-[70%] mx-auto rounded-full py-3 px-4 font-medium transition-all duration-200 cursor-pointer'
@@ -13,12 +14,11 @@ function LandingPage() {
         </h1>
 
         <div className="space-y-3 pt-1">
-          <button
-            type="button"
-            className={`${btnBase} bg-white text-gray-800 border border-gray-300 hover:bg-gray-50 hover:border-gray-400 shadow-sm`}
+          <div
+            className={`${btnBase} min-h-12 bg-white text-gray-800 border border-gray-300 hover:bg-gray-50 hover:border-gray-400 shadow-sm`}
           >
-            Continue with Google
-          </button>
+            <GoogleLoginButton className="w-full" />
+          </div>
           <Link
             to="/login"
             className={`${btnBase} bg-white text-gray-800 border-2 border-gray-800 hover:bg-gray-100 block text-center no-underline`}
@@ -58,7 +58,7 @@ function LandingPage() {
           className="w-full h-auto object-contain drop-shadow-sm"
         />
       </div>
-    </div>
+    </div >
   )
 }
 
