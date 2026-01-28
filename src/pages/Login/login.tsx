@@ -1,44 +1,67 @@
 import { Link } from 'react-router-dom'
+import {
+  linkClassNameBold,
+  inputClassName,
+  labelClassName,
+  btnPrimary,
+  dividerClassName,
+} from '../../constants/classes'
 
 function LoginPage() {
   return (
-    <div className="w-full flex flex-col items-center">
-      <div className="w-[85%] md:w-[28%] shadow-xl rounded-sm box p-10">
-        <div className="text-4xl mb-5">Sign In</div>
-        <div>Google Login Button</div>
-        <div className="flex items-center gap-2">
-          <div className="border-b border-gray-400 w-[45%]"></div>
-          <div>or</div>
-          <div className="border-b border-gray-400 w-[45%] my-6"></div>
+    <div className="w-full flex flex-col items-center py-8 md:py-12 px-5">
+      <div className="w-full max-w-md shadow-lg rounded-xl bg-white p-8 md:p-10">
+        <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-6">
+          Sign in
+        </h1>
+
+        <div className="rounded-full border border-gray-300 py-2.5 px-4 text-center text-gray-500 text-sm cursor-pointer hover:bg-gray-50 transition-colors mb-4">
+          Continue with Google
         </div>
-        <div className="flex flex-col gap-4">
+
+        <div className="flex items-center gap-3 my-6">
+          <div className={dividerClassName} />
+          <span className="text-sm text-gray-500 font-medium">or</span>
+          <div className={dividerClassName} />
+        </div>
+
+        <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
           <div>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="login-email" className={labelClassName}>
+              Email
+            </label>
             <input
-              type="text"
+              id="login-email"
+              type="email"
               placeholder="Email"
-              className="w-full text-xl border-2 rounded-lg px-5 py-1"
+              autoComplete="email"
+              className={inputClassName}
             />
           </div>
           <div>
-            <label htmlFor="password">Password</label>
+            <label htmlFor="login-password" className={labelClassName}>
+              Password
+            </label>
             <input
+              id="login-password"
               type="password"
               placeholder="Password"
-              className="w-full text-xl border-2 rounded-lg px-5 py-1"
+              autoComplete="current-password"
+              className={inputClassName}
             />
           </div>
-          <div className="w-full hover:bg-blue-900 bg-blue-800 text-white py-3 px-4 rounded-xl text-center text-xl cursor-pointer my-2">
-            Sign In
-          </div>
-        </div>
+          <button type="submit" className={`${btnPrimary} mt-1`}>
+            Sign in
+          </button>
+        </form>
       </div>
-      <div className="mt-4 mb-15">
-        New to LinkedIn? &nbsp;
-        <Link to="/signup" className="text-blue-800 cursor-pointer">
+
+      <p className="mt-6 text-base text-gray-700">
+        New to LinkedIn?{' '}
+        <Link to="/signup" className={linkClassNameBold}>
           Join now
         </Link>
-      </div>
+      </p>
     </div>
   )
 }

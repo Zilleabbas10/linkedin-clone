@@ -8,13 +8,15 @@ import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="bg-gray-100 w-full h-full box-border">
+    <div className="bg-gray-100 min-h-screen w-full box-border flex flex-col">
       <Navbar1 />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   )

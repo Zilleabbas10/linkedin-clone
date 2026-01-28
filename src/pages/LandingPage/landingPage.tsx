@@ -1,46 +1,61 @@
 import { Link } from 'react-router-dom'
+import { linkClassName, linkClassNameBold } from '../../constants/classes'
+
+const btnBase =
+  'flex items-center justify-center w-full md:w-[70%] mx-auto rounded-full py-3 px-4 font-medium transition-all duration-200 cursor-pointer'
 
 function LandingPage() {
   return (
-    <div className="my-4 py-12.5 md:pl-30 px-5 md:flex justify-between">
-      <div className="md:w-[40%]">
-        <div className="text-4xl mx-auto text-gray-500">
+    <div className="my-4 py-8 md:py-14 md:pl-16 lg:pl-24 px-5 md:flex md:justify-between md:items-center md:gap-12 max-w-6xl mx-auto">
+      <div className="md:max-w-md md:flex-1 space-y-5">
+        <h1 className="text-3xl md:text-4xl font-semibold text-gray-800 leading-tight tracking-tight">
           Welcome to your professional community
+        </h1>
+
+        <div className="space-y-3 pt-1">
+          <button
+            type="button"
+            className={`${btnBase} bg-white text-gray-800 border border-gray-300 hover:bg-gray-50 hover:border-gray-400 shadow-sm`}
+          >
+            Continue with Google
+          </button>
+          <Link
+            to="/login"
+            className={`${btnBase} bg-white text-gray-800 border-2 border-gray-800 hover:bg-gray-100 block text-center no-underline`}
+          >
+            Sign in with email
+          </Link>
         </div>
-        <div className="my-3 flex mx-auto mt-5 bg-white gap-2 rounded-2xl w-[70%] text-black cursor-pointer">
-          {' '}
-          Google Button
-        </div>
-        <div className="flex mx-auto mt-5 py-2 px-2 bg-white gap-2 rounded-3xl items-center w-[70%] justify-center text-black hover:bg-gray-100 border-2 cursor-pointer">
-          Sign in with email
-        </div>
-        <div className="mx-auto mb-4 text-sm w-[70%] mt-5">
-          By clicking continue to join or sign in, you agree to{' '}
-          <Link to="#" className="text-blue-800 cursor-pointer hover:underline">
+
+        <p className="text-xs text-gray-600 leading-relaxed pt-1">
+          By clicking Continue to join or sign in, you agree to{' '}
+          <Link to="#" className={linkClassName}>
             LinkedIn&apos;s User Agreement
           </Link>
-          , &nbsp;
-          <Link to="#" className="text-blue-800 cursor-pointer hover:underline">
+          ,{' '}
+          <Link to="#" className={linkClassName}>
             Privacy Policy
           </Link>
-          , and &nbsp;
-          <Link to="#" className="text-blue-800 cursor-pointer hover:underline">
+          , and{' '}
+          <Link to="#" className={linkClassName}>
             Cookie Policy
           </Link>
           .
-        </div>
-        <div className="mx-auto mb-4 text-lg mt-4">
+        </p>
+
+        <p className="text-base pt-2">
           New to LinkedIn?{' '}
-          <Link to="/signup" className="text-blue-800 cursor-pointer hover:underline">
+          <Link to="/signup" className={linkClassNameBold}>
             Join now
           </Link>
-        </div>
+        </p>
       </div>
-      <div className="md:w-[50%] h-120 w-full">
+
+      <div className="hidden md:block md:flex-1 md:max-w-[55%] mt-8 md:mt-0">
         <img
           src="https://static-cse.canva.com/blob/717527/headerlinkedin2.png"
-          alt="landingPage"
-          className="w-full h-full"
+          alt="People connecting professionally on LinkedIn"
+          className="w-full h-auto object-contain drop-shadow-sm"
         />
       </div>
     </div>
