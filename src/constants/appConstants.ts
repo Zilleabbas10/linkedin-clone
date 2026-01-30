@@ -18,6 +18,8 @@ export const LINKEDIN_LOGO_URL =
 export const PROFILE_IMG =
   'https://lh3.googleusercontent.com/-Ttj7sBxcNyA/AAAAAAAAAAI/AAAAAAAAAAA/ALKGfklOnrO5CJoCoDbNqLE6sPYk2urbQg/photo.jpg?sz=46'
 
+export const PROFILE_IMG_1 = 'https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg?semt=ais_hybrid&w=740&q=80'
+
 export const PROFILE_COVER_IMG = 'https://www.shutterstock.com/shutterstock/photos/1202031361/display_1500/stock-photo-sunset-in-florence-header-picture-1202031361.jpg'
 
 // ─── Routes ─────────────────────────────────────────────────────────────────
@@ -28,7 +30,7 @@ export const ROUTES = {
   RESUME: '/resume',
   MESSAGES: '/messages',
   NOTIFICATIONS: '/notifications',
-  PROFILE: '/profile',
+  PROFILE: '/profile/1ab23',
   LOGIN: '/login',
   SIGNUP: '/signup',
   LANDING: '/',

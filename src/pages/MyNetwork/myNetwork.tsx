@@ -1,7 +1,7 @@
 import { useState } from "react"
 import ProfileCard from "../../components/ProfileCard/profileCard"
 
-const MyNetwork = () => {
+const MyNetworkPage = () => {
     const [selectedButtonType, setSelectedButtonType] = useState<'friends' | 'requests'>('friends')
     const isFriendButtonSelected = selectedButtonType === 'friends'
     const selectedButtonStyle = 'text-white bg-blue-800'
@@ -57,4 +57,4 @@ const MyNetwork = () => {
     )
 }
 
-export default MyNetwork
+export default MyNetworkPage

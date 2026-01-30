@@ -13,13 +13,15 @@ const Navbar2 = () => {
     const inactiveSpan = 'text-sm text-gray-500'
 
     return (
-        <nav className='bg-white h-13 flex justify-between py-1 px-5 xl:px-50 fixed top-0 w-full z-1000'>
+        <nav className='bg-white h-13 flex justify-between py-1 border-b border-gray-300 px-5 xl:px-50 fixed top-0 w-full z-1000'>
             <div className="flex gap-2 items-center hover:opacity-90 transition-opacity">
-                <img
-                    src={LINKEDIN_LOGO_URL}
-                    alt="LinkedInLogo"
-                    className="size-7"
-                />
+                <Link to='/feeds'>
+                    <img
+                        src={LINKEDIN_LOGO_URL}
+                        alt="LinkedInLogo"
+                        className="size-7"
+                    />
+                </Link>
                 <div className="relative">
                     <input
                         className="w-70 bg-gray-100 rounded-sm h-10 px-4 border-2 border-transparent transition-[width] duration-500 focus:w-[350px] focus:outline-none focus:border-blue-600"

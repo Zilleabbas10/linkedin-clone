@@ -19,7 +19,9 @@ const Modal = (props: ModalType) => {
                             </div>
                         )
                     }
-                    <div onClick={closeModal} className="cursor-pointer absolute right-2"><CloseIcon /></div>
+                    <div onClick={closeModal} className="cursor-pointer absolute right-2 hover:bg-gray-200 rounded-full size-10 flex justify-center items-center">
+                        <CloseIcon />
+                    </div>
                 </div>
                 {children}
             </div >
