@@ -1,16 +1,19 @@
-import './App.css'
+
+import { Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer/footer'
 import Navbar1 from './components/NavbarV1/navbar1'
 import Navbar2 from './components/NavbarV2/navbar2'
 import LandingPage from './pages/Landing/landing'
 import SignupPage from './pages/SignUp/signup'
 import LoginPage from './pages/Login/login'
-import { Routes, Route } from 'react-router-dom'
 import FeedsPage from './pages/Feeds/feeds'
 import MyNetworkPage from './pages/MyNetwork/myNetwork'
 import ResumePage from './pages/Resume/resume'
 import MessagesPage from './pages/Messages/messages'
 import ProfilePage from './pages/Profile/profile'
+import ActivitiesPage from './pages/Activities/activities'
+import PostDetailsPage from './pages/PostDetails/postDetails'
+import './App.css'
 
 const App = () => {
   const isLoggedIn = true
@@ -26,6 +29,8 @@ const App = () => {
           <Route path="/my_network" element={<MyNetworkPage />} />
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/messages" element={<MessagesPage />} />
+          <Route path="/profile/:id/activities/:postId" element={<PostDetailsPage />} />
+          <Route path="/profile/:id/activities" element={<ActivitiesPage />} />
           <Route path="/profile/:id" element={<ProfilePage />} />
         </Routes>
       </main>

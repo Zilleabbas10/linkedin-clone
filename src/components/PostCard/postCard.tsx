@@ -6,7 +6,12 @@ import SendIcon from '@mui/icons-material/Send';
 import { DUMMY_TEXT, PROFILE_IMG } from "../../constants/appConstants"
 import Card from "../Card/card"
 
-const PostCard = () => {
+type PostCardProps = {
+    areButtonsShown?: boolean
+}
+
+const PostCard = (props: PostCardProps) => {
+    const { areButtonsShown = true } = props
     const [seeMore, setSeeMore] = useState(false)
     const [isLiked, setLiked] = useState(true)
     const [isCommentSectionInPort, setCommentSectionInPort] = useState(false)
@@ -52,20 +57,25 @@ const PostCard = () => {
                     <span className="text-sm text-gray-600">2 comments</span>
                 </div>
             </div>
-            <div className="flex p-1">
-                <div onClick={() => setLiked((prev) => !prev)} className="w-[33%] justify-center flex gap-2 items-center border-r border-gray-100 p-2 hover:bg-gray-100 cursor-pointer">
-                    {isLiked ? <ThumbUpAltIcon sx={{ fontSize: 22, color: 'blue' }} /> : <ThumbUpOffAltIcon sx={{ fontSize: 22, color: 'blue' }} />}
-                    <span>{isLiked ? 'Liked' : 'Like'}</span>
-                </div>
-                <div onClick={() => setCommentSectionInPort((prev) => !prev)} className="w-[33%] justify-center flex gap-2 items-center border-r border-gray-100 p-2 hover:bg-gray-100 cursor-pointer">
-                    <CommentIcon sx={{ fontSize: 22 }} />
-                    <span>Comment</span>
-                </div>
-                <div className="w-[33%] justify-center flex gap-2 items-center border-r border-gray-100 p-2 hover:bg-gray-100 cursor-pointer">
-                    <SendIcon sx={{ fontSize: 22 }} />
-                    <span>Share</span>
-                </div>
-            </div>
+            {
+                areButtonsShown && (
+                    <div className="flex p-1">
+                        <div onClick={() => setLiked((prev) => !prev)} className="w-[33%] justify-center flex gap-2 items-center border-r border-gray-100 p-2 hover:bg-gray-100 cursor-pointer">
+                            {isLiked ? <ThumbUpAltIcon sx={{ fontSize: 22, color: 'blue' }} /> : <ThumbUpOffAltIcon sx={{ fontSize: 22, color: 'blue' }} />}
+                            <span>{isLiked ? 'Liked' : 'Like'}</span>
+                        </div>
+                        <div onClick={() => setCommentSectionInPort((prev) => !prev)} className="w-[33%] justify-center flex gap-2 items-center border-r border-gray-100 p-2 hover:bg-gray-100 cursor-pointer">
+                            <CommentIcon sx={{ fontSize: 22 }} />
+                            <span>Comment</span>
+                        </div>
+                        <div className="w-[33%] justify-center flex gap-2 items-center border-r border-gray-100 p-2 hover:bg-gray-100 cursor-pointer">
+                            <SendIcon sx={{ fontSize: 22 }} />
+                            <span>Share</span>
+                        </div>
+                    </div>
+
+                )
+            }
             {
                 isCommentSectionInPort && (
                     <div className="w-full p-4">
