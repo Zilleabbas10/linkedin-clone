@@ -7,6 +7,7 @@ import SignupPage from './pages/SignUp/signup'
 import LoginPage from './pages/Login/login'
 import { Routes, Route } from 'react-router-dom'
 import FeedsPage from './pages/Feeds/feeds'
+import MyNetwork from './pages/MyNetwork/myNetwork'
 
 const App = () => {
   const isLoggedIn = true
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/feeds" element={<FeedsPage />} />
+          <Route path="/my_network" element={<MyNetwork />} />
         </Routes>
       </main>
       <Footer />
