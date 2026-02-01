@@ -13,6 +13,7 @@ import MessagesPage from './pages/Messages/messages'
 import ProfilePage from './pages/Profile/profile'
 import ActivitiesPage from './pages/Activities/activities'
 import PostDetailsPage from './pages/PostDetails/postDetails'
+import NotificationsPage from './pages/Notifications/notifications'
 import './App.css'
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/my_network" element={<MyNetworkPage />} />
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/messages" element={<MessagesPage />} />
+          <Route path="/notifications" element={<NotificationsPage />} />
           <Route path="/profile/:id/activities/:postId" element={<PostDetailsPage />} />
           <Route path="/profile/:id/activities" element={<ActivitiesPage />} />
           <Route path="/profile/:id" element={<ProfilePage />} />
