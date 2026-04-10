@@ -1,4 +1,3 @@
-
 import { Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer/footer'
 import Navbar1 from './components/NavbarV1/navbar1'
@@ -14,13 +13,16 @@ import ProfilePage from './pages/Profile/profile'
 import ActivitiesPage from './pages/Activities/activities'
 import PostDetailsPage from './pages/PostDetails/postDetails'
 import NotificationsPage from './pages/Notifications/notifications'
+import { useAuthStatus } from './hooks/queries/authQueries'
 import './App.css'
 
 const App = () => {
-  const isLoggedIn = true
+  const { data: authData, isLoading } = useAuthStatus()
+  const isLoggedIn = !!authData
+
   return (
     <div className="bg-gray-100 min-h-screen w-full box-border flex flex-col">
-      {isLoggedIn ? <Navbar2 /> : <Navbar1 />}
+      {isLoading ? <Navbar1 /> : isLoggedIn ? <Navbar2 /> : <Navbar1 />}
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<LandingPage />} />
